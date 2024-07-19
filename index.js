@@ -9,8 +9,8 @@ const swap = async() => {
 
     const baseMint = 'So11111111111111111111111111111111111111112'; // e.g. SOLANA mint address
     const quoteMint = 'HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3'; // e.g. PYTH mint address process.env.WALLET_PRIVATE_KEY
-
-    const raydiumSwap = new RaydiumSwap('https://api.mainnet-beta.solana.com', process.env.WALLET_PRIVATE_KEY);
+    //consider using https://api.mainnet-beta.solana.com for swap on mainnet
+    const raydiumSwap = new RaydiumSwap('process.env.RPC_URL', process.env.WALLET_PRIVATE_KEY);
     console.log(`Raydium swap initialized`);
 
     // Loading with pool keys from https://api.raydium.io/v2/sdk/liquidity/mainnet.json
